@@ -1,0 +1,29 @@
+
+
+
+.menuTable {
+    width: 100%;
+    border-collapse: collapse;
+    /*padding: 10PX;
+    margin: 0 auto;  Centra la tabla */
+}
+
+.menuTable tr {
+    border-top: 2px dashed;
+}
+
+.itemName {
+    text-align: left;
+    width: 70%;
+}
+
+.itemPrice {
+    text-align: right;
+    width: 30%;
+}
+
+
+.itemName, .itemPrice{
+    font-weight: bold;
+    padding-bottom: 3vh;
+}

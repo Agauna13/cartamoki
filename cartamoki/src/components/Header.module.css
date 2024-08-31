@@ -1,0 +1,14 @@
+.cabecera {
+    display: grid; /* Cambiar inline-grid a grid para alineación adecuada */
+    grid-template-columns: 1fr auto 1fr;
+    position: sticky;
+    backdrop-filter: blur(10px);
+    top: 0;
+    justify-content: space-evenly;
+    align-items: center; /* Asegurar que los elementos estén centrados verticalmente */
+    background: transparent;
+    width: 100vw; /* Cambiar 100vh a 100vw para abarcar el ancho completo */
+    height: 9vh;
+    z-index: 5;
+}
+

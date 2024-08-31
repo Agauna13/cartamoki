@@ -1,0 +1,58 @@
+.contenedor {
+    display: none;
+    overflow: hidden;
+    text-align: center;
+    width: 40vw;
+    background-color: inherit;
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90vw;
+    animation: despliegue 0.5s ease-out;
+    
+}
+
+@keyframes despliegue {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 100vh;
+    }
+}
+
+.desplegables {
+    /*background-color: transparent;*/
+    display: flex;
+    flex-direction: column ;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.numero {
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 300px) and (max-width: 1024px) {
+    .contenedor,
+    .mostrar {
+        min-width: 95vw;
+    }
+
+    .numero{
+        font-size: 5vw;
+    }
+    tr, td{
+        font-size: 3vw;
+    }
+
+    button{
+        font-size: 3vw;
+    }
+
+}

@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url('../public/fonts/BERNIER™Regular.ttf') format('truetype'),
+    url('../public/fonts/BERNIER™Shade.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
