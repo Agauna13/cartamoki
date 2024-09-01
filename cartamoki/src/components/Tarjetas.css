@@ -13,6 +13,8 @@
 .tarjetaComidas {
   display: grid;
   grid-template-rows: 2.5fr 1.5fr;
+  width: 70vw;
+  height: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
