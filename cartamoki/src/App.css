@@ -65,8 +65,6 @@ button:hover {
     color: white;
 }
 
-.light-mode input,
-.light-mode textarea,
 .light-mode h1,
 .light-mode button,
 .light-mode td {
@@ -75,8 +73,6 @@ button:hover {
     text-shadow: 1px 1px 2px white;
 }
 
-.dark-mode input,
-.dark-mode textarea,
 .dark-mode h1,
 .dark-mode button,
 .dark-mode td {
@@ -86,20 +82,11 @@ button:hover {
 
 }
 
-.light-mode input,
-.dark-mode input,
-.light-mode textarea,
-.dark-mode textarea {
-    background: transparent;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
-    font-weight: bold;
-}
 
 /* Container and menu styles */
 .contenedor {
-    display:flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-rows: repeat(2, 40vh);
     width: 100vw;
     gap: 15px;
     align-items: center;
