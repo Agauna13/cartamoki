@@ -35,13 +35,13 @@
 }
 
 /* Estilos Específicos para Tarjetas de Bebidas y Comidas */
-.tarjetaBebidas {
+/*.tarjetaBebidas {
   background-image: url('../components/media/689191855_225951638_1024x576.jpeg');
 }
 
 .tarjetaComidas {
   background-image: url('../components/media/imagenMokitrokis.jpg');
-}
+}*/
 
 /* Estilos para Botones */
 button {
