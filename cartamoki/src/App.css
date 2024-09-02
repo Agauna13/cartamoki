@@ -110,7 +110,11 @@ button:hover {
     background-color: black;
 }
 
-
+.ignore{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 3.5vh;
+}
 /* Media Query para dispositivos móviles */
 @media screen and (min-width: 200px) and (max-width: 915px) {
     .contenedor{

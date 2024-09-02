@@ -28,7 +28,7 @@ const MenuComidas = () => {
                 <h3 className={styles.numero} onClick={() => toggleSection('bocatas')}>BOCADILLOS <GiSandwich />
                 </h3>
                 <div className={`${styles.contenedor} ${visibleSections.bocatas ? styles.mostrar : ''}`}>
-                    <h4>Bocadillo a elegir entre atún, queso, serrano, York, camaiot o sobrasada:</h4>
+                    <h3 className = "ignore">Bocadillo a elegir entre atún, queso, serrano, York, camaiot o sobrasada:</h3>
                     <Subsection title="" items={bocadilloItems} />
                 </div>
                 <h3 className={styles.numero} onClick={() => toggleSection('sanpepis')}>SANDWICHES Y PEPITOS <LuSandwich />
