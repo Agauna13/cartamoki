@@ -58,7 +58,7 @@
 
 			export const bocadilloItems = [
 				//acordarse de poner encabezamiento => Bocadillo de atún, queso, serrano, York, camaiot o sobrasada: \n
-				{name: 'Bocadillo de atún, queso, serrano, York, camaiot o sobrasada:', price:''},
+				/*{name: 'Bocadillo de atún, queso, serrano, York, camaiot o sobrasada:', price:''},*/
 				{name: '  1 Ingrediente', price: '3,50€'},
 				{name: '  2 Ingredientes', price: '4,00€'},
 				{name: 'Tortilla Francesa', price: '4,50€'},

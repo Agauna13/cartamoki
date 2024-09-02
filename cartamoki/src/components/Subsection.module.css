@@ -4,12 +4,12 @@
 .menuTable {
     width: 100%;
     border-collapse: collapse;
-    /*padding: 10PX;
-    margin: 0 auto;  Centra la tabla */
+    /*padding: 10PX;*/
+    margin: 0 auto;
 }
 
 .menuTable tr {
-    border-top: 2px dashed;
+    border-top: 1px dashed;
 }
 
 .itemName {
@@ -23,7 +23,8 @@
 }
 
 
-.itemName, .itemPrice{
+.itemName, .itemPrice, h4{
     font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
     padding-bottom: 3vh;
 }

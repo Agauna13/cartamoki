@@ -14,9 +14,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Center horizontally */
     align-items: center;
-    /* Center vertically */
     width: 100%;
 }
 
@@ -31,14 +29,9 @@ button {
     background: none;
     border: none;
     padding: 0;
-    /* Remove padding */
     cursor: pointer;
-    /* Add pointer cursor for better UX */
     font-family: 'miFuente';
-    /*font-size: 2vw;*/
-    /* Adjusted to 2vw as per your bottom button style */
     font-weight: bold;
-    /* Moved from separate button style */
     width: fit-content;
     align-self: center;
     justify-self: center;
@@ -100,6 +93,7 @@ button:hover {
     justify-content: flex-start;
     text-align: center;
     gap: 10px;
+    margin-bottom: 5vh;
 }
 
 .separador {

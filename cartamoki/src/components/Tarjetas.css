@@ -67,8 +67,10 @@ button:hover {
 @media screen and (min-width: 200px) and (max-width: 915px) {
   .tarjeta {
     width: 90vw; /* Ajuste para dispositivos móviles */
-    height: auto; /* Ajusta la altura automática para evitar desbordamiento */
+    height: 40vh; /* Ajusta la altura automática para evitar desbordamiento */
     font-size: 4vw;
+    align-items: center;
+    justify-content: center;
   }
 
   .tarjeta button {
