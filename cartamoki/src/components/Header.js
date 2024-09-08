@@ -8,14 +8,14 @@ import { TfiBackLeft } from "react-icons/tfi";
 
 
 
-const Header = ({toggleTheme, isDarkMode, showTarjetas }) => {   //aqui faltaría el parametro scrollToReservations presente para que haga el scroll al pulsar el botón
+const Header = ({toggleTheme, isDarkMode, showTarjetas, showBackButton }) => {   //aqui faltaría el parametro scrollToReservations presente para que haga el scroll al pulsar el botón
   
 
     return (
         <header className={styles.cabecera}>
             <button onClick={toggleTheme} className={styles.icon}>  { isDarkMode? <FaSun /> : <FaMoon /> } </button>
             <h1 className="titulo" onClick = {showTarjetas}>MOKITROKIS</h1>
-            <button className="back" onClick ={showTarjetas}>Volver <TfiBackLeft /></button>
+            {showBackButton && (<button className="back" onClick ={showTarjetas}>Volver <TfiBackLeft /></button>) }
             
         </header>
     );
