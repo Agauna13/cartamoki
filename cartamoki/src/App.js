@@ -12,6 +12,7 @@ const App = () => {
     const [activeCard, setActiveCard] = useState(null);
     const [activeMenu, setActiveMenu] = useState(null);
 
+
     useEffect(() => {
         document.body.classList.toggle('dark-mode', isDarkMode);
         document.body.classList.toggle('light-mode', !isDarkMode);
@@ -38,7 +39,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+            <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} showTarjetas={showTarjetas} />
             
             <div className="content">
                 {!activeMenu && (

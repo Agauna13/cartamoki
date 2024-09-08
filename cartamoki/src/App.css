@@ -115,6 +115,20 @@ button:hover {
     font-weight: bold;
     font-size: 2.5vh;
 }
+
+
+.back{
+    font-size: clamp(1.7vw, 3vw, 16px);
+}
+
+
+.titulo{
+    cursor: pointer;
+    font-size: clamp(2.5vw, 4vh, 24px);
+}
+
+
+
 /* Media Query para dispositivos móviles */
 @media screen and (min-width: 200px) and (max-width: 915px) {
     .contenedor{
@@ -124,5 +138,5 @@ button:hover {
         height: 100%;
         gap: 15px;
     }
-  }
-  
+}
+
