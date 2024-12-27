@@ -1,10 +1,10 @@
 // Menu.js
 import React from 'react';
+import { GiChiliPepper, GiHamburger, GiHotDog, GiNachos, GiOlive, GiSandwich } from "react-icons/gi";
 import { GrToast } from "react-icons/gr";
 import { IoLogoFreebsdDevil } from "react-icons/io";
+import { LuPizza, LuSalad, LuSandwich, LuVegan } from "react-icons/lu";
 import { MdDinnerDining } from "react-icons/md";
-import { LuSandwich, LuSalad, LuVegan, LuPizza } from "react-icons/lu";
-import { GiNachos, GiHotDog, GiHamburger, GiSandwich, GiOlive, GiChiliPepper } from "react-icons/gi";
 
 import styles from './Menu.module.css';
 import Subsection from './Subsection.js';
@@ -75,7 +75,7 @@ const MenuComidas = () => {
                 <div className={`${styles.contenedor} ${visibleSections.veganos ? styles.mostrar : ''}`}>
                     <Subsection title="" items={veganoItems} />
                 </div>
-                <h3 className={styles.numero} onClick={() => toggleSection('menusMoki')}>NUESTROS MENUS MOKITROKIS O TRADICIONAL DIMONIS <IoLogoFreebsdDevil />
+                <h3 className={styles.numero} onClick={() => toggleSection('menusMoki')}>MENUS MOKITROKIS O TRADICIONAL DIMONIS <IoLogoFreebsdDevil />
                 </h3>
                 <div className={`${styles.contenedor} ${visibleSections.menusMoki ? styles.mostrar : ''}`}>
                     <Subsection title="" items={menusMokiItems} />
