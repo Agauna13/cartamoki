@@ -5,7 +5,7 @@ const TarjetaComidas = ({ onClick }) => {
   return (
     <div className="tarjeta tarjetaComidas comidas" onClick={onClick}>
       <h1>¡Si tienes hambre, echa un vistazo!</h1>
-      <button /*onClick={onClick}*/>PARA COMER</button>
+      <button>PARA COMER</button>
     </div>
   );
 };
