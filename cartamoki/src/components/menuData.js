@@ -28,7 +28,7 @@
 				{name: 'Copa de vino blanco Verdejo', price: '2,50€'},
 				{name: 'Botella de vino', price: '9,00€'},
 				{name: 'Agua 0.5L', price: '1,50€'},
-				{name: 'Agua 1.5L', price: '2.00'}
+				{name: 'Agua 1.5L', price: '2,00€'}
 				
 			];
 
@@ -49,7 +49,7 @@
 			export const toastItems = [
 				{name: 'Tomate', price: '1,70€'},
 				{name: 'Pan moreno y tomate', price: '1,90€'},
-				{name: 'Mantequilla y mermelada (Pan de barra o Bimbo)', price: '3,80€'},
+				{name: 'Mantequilla y mermelada (Pan de barra o Bimbo)', price: '1,70€'},
 				{name: 'Pan moreno y aguacate', price: '3,80€'},
 				{name: '  +Ing. extra: queso, atún, serrano, York o camaiot', price: '1,00€'},
 				{name: '  +Huevo', price: '1,30€'},
