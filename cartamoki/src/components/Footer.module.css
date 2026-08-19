@@ -1,0 +1,77 @@
+.footer {
+    position: relative;
+    background: var(--paper-sunk);
+    /* Deja sitio a la faldilla del toldo. */
+    padding-top: 0.9rem;
+}
+
+/* Faldilla de toldo, a una sola tinta: el guiño de terraza sin irse de fiesta. */
+.footer::after {
+    --sc: 0.55rem;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.9rem;
+    background: var(--accent);
+    -webkit-mask: var(--mask-scallop);
+    mask: var(--mask-scallop);
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding: clamp(2.5rem, 6vw, 4rem) var(--gutter);
+    text-align: center;
+}
+
+.marca {
+    width: 2.75rem;
+    height: auto;
+    /* M.png viene en negativo (M blanca sobre negro), al revés que el sello:
+       en oscuro basta 'screen' para tumbar el negro; en claro hay que invertir
+       primero y tumbar el blanco con 'multiply'.
+       Nada de opacity aquí: crearía un contexto de apilamiento y anularía el blend. */
+    mix-blend-mode: screen;
+}
+
+:global([data-theme='light']) .marca {
+    filter: invert(1);
+    mix-blend-mode: multiply;
+}
+
+.legal {
+    font-size: var(--step--1);
+    line-height: 1.6;
+    color: var(--ink-45);
+}
+
+.top {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.1rem;
+    border: 1px solid var(--ink-12);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-70);
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+
+.top:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.top svg {
+    width: 1.05em;
+    height: 1.05em;
+}

@@ -1,0 +1,267 @@
+.hero {
+    max-width: var(--measure);
+    margin-inline: auto;
+    padding: clamp(2rem, 7vw, 5rem) var(--gutter) clamp(3rem, 8vw, 6rem);
+}
+
+/* --- El cartel ----------------------------------------------------------- */
+
+.poster {
+    text-align: center;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.eyebrowRule {
+    display: block;
+    width: clamp(1.5rem, 8vw, 5rem);
+    height: 1px;
+    background: currentColor;
+    opacity: 0.5;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--step-4);
+    line-height: 0.8;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+    /* El titular ocupa el ancho disponible sin partirse nunca. */
+    white-space: nowrap;
+}
+
+.strap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 2.5rem);
+    margin-top: clamp(1.5rem, 4vw, 2.75rem);
+}
+
+.tagline {
+    max-width: 30ch;
+    text-align: left;
+    font-size: var(--step-1);
+    line-height: 1.35;
+    color: var(--ink-70);
+    text-wrap: balance;
+}
+
+/* El sello de la casa girando despacio, como un tampón que nunca se para. */
+.sello {
+    flex: none;
+    width: clamp(5rem, 12vw, 8.5rem);
+    height: auto;
+    mix-blend-mode: multiply;
+    animation: girar 42s linear infinite;
+}
+
+:global([data-theme='dark']) .sello {
+    filter: invert(1);
+    mix-blend-mode: screen;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sello {
+        animation: none;
+    }
+}
+
+/* --- Puertas de entrada -------------------------------------------------- */
+
+.gateways {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    margin-top: clamp(2.5rem, 7vw, 5rem);
+}
+
+.gateway {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: clamp(19rem, 42vw, 27rem);
+    padding: clamp(1.1rem, 2.5vw, 1.75rem);
+    text-align: left;
+    border: 1px solid var(--ink-12);
+    border-radius: var(--radius);
+    /* Fijo, no del tema: el texto siempre cae sobre la foto en duotono. */
+    color: #f7f1e6;
+    transition: transform 0.5s var(--ease), border-color 0.3s var(--ease);
+}
+
+/* Dos tintas por puerta: la sombra y la luz de la duotonía. */
+.gateway[data-ink='ember'] {
+    --duo-dark: #1d0a05;
+    --duo-light: #ff7043;
+    --gateway-accent: var(--ember);
+}
+
+.gateway[data-ink='sea'] {
+    --duo-dark: #04191b;
+    --duo-light: #4fd6c6;
+    --gateway-accent: var(--sea);
+}
+
+.gateway:hover,
+.gateway:focus-visible {
+    transform: translateY(-4px);
+    border-color: var(--gateway-accent);
+}
+
+/* --- Duotonía ------------------------------------------------------------ */
+/* Foto en blanco y negro sobre la tinta oscura y velada con la tinta clara:
+   dos planchas, como en una serigrafía de verdad. */
+
+.photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--duo-dark);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.15);
+    mix-blend-mode: screen;
+    transition: transform 0.9s var(--ease), filter 0.6s var(--ease);
+}
+
+.photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--duo-light);
+    mix-blend-mode: multiply;
+}
+
+/* Trama de puntos: el punto de imprenta que delata el papel. */
+.photo::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background-image: radial-gradient(#000 1px, transparent 1.15px);
+    background-size: 4px 4px;
+    opacity: 0.2;
+}
+
+.gateway:hover .photo img,
+.gateway:focus-visible .photo img {
+    transform: scale(1.05);
+    filter: grayscale(0.3) contrast(1.05);
+}
+
+/* Velo: sin él la BERNIER blanca se pierde sobre la foto. Cargado abajo, donde
+   está el texto, y un toque arriba para el número de orden. */
+.gateway::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        linear-gradient(to top, rgba(6, 3, 2, 0.86) 0%, rgba(6, 3, 2, 0.62) 28%, rgba(6, 3, 2, 0) 60%),
+        linear-gradient(to bottom, rgba(6, 3, 2, 0.5) 0%, rgba(6, 3, 2, 0) 24%);
+}
+
+/* --- Contenido de la puerta ---------------------------------------------- */
+
+.gatewayBody {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.gatewayIndex {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.2em;
+    opacity: 0.8;
+}
+
+.gatewayTitle {
+    margin-top: auto;
+    font-size: var(--step-3);
+    line-height: 0.85;
+}
+
+.gatewayCaption {
+    margin-top: 0.6rem;
+    max-width: 24ch;
+    font-size: var(--step--1);
+    line-height: 1.4;
+    opacity: 0.85;
+}
+
+.gatewayFoot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.1rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.gatewayCount {
+    font-family: var(--font-mono);
+    font-size: var(--step--1);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.gatewayArrow {
+    width: 1.4em;
+    height: 1.4em;
+    flex: none;
+    transition: transform 0.4s var(--ease);
+}
+
+.gateway:hover .gatewayArrow,
+.gateway:focus-visible .gatewayArrow {
+    transform: translateX(6px);
+}
+
+/* --- Móvil --------------------------------------------------------------- */
+
+@media (max-width: 46rem) {
+    .gateways {
+        grid-template-columns: 1fr;
+    }
+
+    .gateway {
+        min-height: 15rem;
+    }
+
+    .strap {
+        flex-direction: column-reverse;
+        gap: 1.25rem;
+    }
+
+    .tagline {
+        text-align: center;
+        max-width: 34ch;
+    }
+}

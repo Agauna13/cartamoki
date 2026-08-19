@@ -1,25 +1,44 @@
-//Header.js
-// src/components/Header.js
+// Header.js — cabecera fija: volver, marca y cambio de tinta (claro/oscuro).
 import React from 'react';
-import { FaMoon, FaSun } from "react-icons/fa6";
-import styles from  './Header.module.css';
-import { TfiBackLeft } from "react-icons/tfi";
+import { LuArrowLeft, LuMoon, LuSun } from 'react-icons/lu';
+import styles from './Header.module.css';
 
-
-
-
-const Header = ({toggleTheme, isDarkMode, showTarjetas, showBackButton }) => {   //aqui faltaría el parametro scrollToReservations presente para que haga el scroll al pulsar el botón
-  
+const Header = ({ theme, toggleTheme, onHome, showBack, innerRef }) => {
+    const isDark = theme === 'dark';
 
     return (
-        <header className={styles.cabecera}>
-            <button onClick={toggleTheme} className={styles.icon}>  { isDarkMode? <FaSun /> : <FaMoon /> } </button>
-            <h1 className="titulo" onClick = {showTarjetas}>MOKITROKIS</h1>
-            {showBackButton && (<button className="back" onClick ={showTarjetas}>Volver <TfiBackLeft /></button>) }
-            
+        <header ref={innerRef} className={styles.header}>
+            <div className={styles.inner}>
+                <div className={styles.slot}>
+                    {showBack && (
+                        <button type="button" className={styles.action} onClick={onHome}>
+                            <LuArrowLeft aria-hidden="true" />
+                            <span className={styles.actionLabel}>Volver</span>
+                        </button>
+                    )}
+                </div>
+
+                <button type="button" className={styles.wordmark} onClick={onHome}>
+                    <span className="misprint" data-text="Mokitrokis" aria-hidden="true">
+                        Mokitrokis
+                    </span>
+                    <span className="visually-hidden">Mokitrokis — volver al inicio</span>
+                </button>
+
+                <div className={`${styles.slot} ${styles.slotEnd}`}>
+                    <button
+                        type="button"
+                        className={styles.action}
+                        onClick={toggleTheme}
+                        aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+                        title={isDark ? 'Modo claro' : 'Modo oscuro'}
+                    >
+                        {isDark ? <LuSun aria-hidden="true" /> : <LuMoon aria-hidden="true" />}
+                    </button>
+                </div>
+            </div>
         </header>
     );
 };
 
 export default Header;
-
