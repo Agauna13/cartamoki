@@ -255,13 +255,19 @@
         min-height: 15rem;
     }
 
+    /* También en móvil van en dos columnas: la frase a la izquierda y el sello
+       girando a la derecha. */
     .strap {
-        flex-direction: column-reverse;
-        gap: 1.25rem;
+        gap: 1rem;
     }
 
     .tagline {
-        text-align: center;
-        max-width: 34ch;
+        flex: 1;
+        max-width: none;
+        font-size: var(--step-0);
+    }
+
+    .sello {
+        width: clamp(4.25rem, 22vw, 6rem);
     }
 }
