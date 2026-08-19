@@ -29,6 +29,8 @@ export const foodSections = [
         icon: GrToast,
         items: [
             { name: 'Tomate o mantequilla', price: 1.7 },
+            { name: 'Pan moreno y tomate', price: 1.9 },
+            { name: 'Mantequilla y mermelada', desc: 'Pan de barra o Bimbo', price: 1.7 },
             { name: 'Pan moreno y aguacate', price: 4.1 },
             { name: 'Ingrediente extra', desc: 'Queso, atún, serrano, york o camaiot', price: 1.0, modifier: true },
             { name: 'Huevo o beicon', price: 1.3, modifier: true }
@@ -43,7 +45,8 @@ export const foodSections = [
             { name: '1 ingrediente', price: 4.5 },
             { name: '2 ingredientes', price: 5.0 },
             { name: 'Tortilla francesa', price: 5.5 },
-            { name: 'Beicon y queso', price: 6.0 }
+            { name: 'Beicon y queso', price: 6.0 },
+            { name: 'Ingrediente extra', price: 1.0, modifier: true }
         ]
     },
     {
@@ -76,7 +79,8 @@ export const foodSections = [
                 desc: 'Pollo, beicon, queso, lechuga, tomate y salsa Dimonis',
                 price: 8.0
             },
-            { name: 'Sándwich mixto', desc: 'York y queso', price: 4.5 }
+            { name: 'Sándwich mixto', desc: 'York y queso', price: 4.5 },
+            { name: 'Ingrediente extra: beicon y queso', price: 1.0, modifier: true }
         ]
     },
     {
@@ -94,7 +98,9 @@ export const foodSections = [
             { name: 'Patatas con beicon', desc: 'Beicon, cebolla pochada y mozzarella', price: 8.0 },
             { name: 'Patatas 4 quesos', price: 7.0 },
             { name: 'Ración de patatas', price: 3.8 },
-            { name: 'Ración de boniato', price: 4.5 }
+            { name: 'Ración de patata teja', price: 3.5 },
+            { name: 'Ración de boniato', price: 4.5 },
+            { name: 'Verduras en tempura', price: 6.0 }
         ]
     },
     {
@@ -255,6 +261,7 @@ export const drinkSections = [
             { name: 'Café solo', price: 1.3 },
             { name: 'Cortado', price: 1.4 },
             { name: 'Café con leche', price: 1.6 },
+            { name: 'Carajillo', price: 2.0 },
             { name: 'Café bombón', price: 2.5 },
             { name: 'Chocolate caliente', price: 3.0 },
             { name: 'Infusión', price: 1.6 }
@@ -274,8 +281,16 @@ export const drinkSections = [
             { name: 'Jarra', price: 3.0 },
             { name: 'Cerveza de botella', price: 2.5 },
             { name: 'Cerveza de botella reserva', price: 2.8 },
+            { name: 'Alhambra Verde', price: 2.8 },
+            { name: 'Daura', desc: 'Sin gluten', price: 2.8 },
+            { name: 'Estrella Damm', price: 2.5 },
+            { name: 'Estrella Damm 0,0', price: 2.5 },
+            { name: 'Estrella Galicia', price: 2.5 },
+            { name: 'Mahou', price: 2.5 },
+            { name: 'Heineken', price: 2.5 },
             { name: 'Copa de vino tinto Rioja crianza', price: 2.8 },
             { name: 'Copa de vino blanco Verdejo', price: 2.8 },
+            { name: 'Botella de vino', price: 9.0 },
             { name: 'Agua 1,5 L', price: 2.0 },
             { name: 'Agua 0,5 L', price: 1.5 }
         ]
@@ -289,7 +304,8 @@ export const drinkSections = [
             { name: 'Copa grande', price: 3.0 },
             { name: 'Chupitos', price: 2.2 },
             { name: 'Cubata', price: 7.0 },
-            { name: 'Cubata especial', price: 8.5 }
+            { name: 'Cubata especial', price: 8.5 },
+            { name: 'Red Bull', price: 0.5, modifier: true }
         ]
     }
 ];
